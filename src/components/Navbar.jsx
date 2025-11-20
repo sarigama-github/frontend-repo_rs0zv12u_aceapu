@@ -18,7 +18,7 @@ function Navbar() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-900/50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="text-white font-semibold tracking-tight">
-          <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">DataVision</span> Academy
+          <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">N NextGen</span> Analytics
         </a>
         <nav className="hidden md:flex items-center gap-6 text-slate-300">
           {links.map(l => (

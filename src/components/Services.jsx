@@ -1,13 +1,49 @@
 import { motion } from 'framer-motion';
-import { BarChart3, Megaphone, Search, Share2, Bot, TrendingUp } from 'lucide-react';
+import { BarChart3, Megaphone, Bot } from 'lucide-react';
 
 const services = [
-  { icon: BarChart3, title: 'Data Analytics & Reporting', desc: 'Interactive dashboards, KPI tracking, and insight generation using Power BI, Excel, SQL, and Python.' },
-  { icon: Megaphone, title: 'Google Ads & Meta Ads Management', desc: 'End-to-end campaign setup, optimization, and scaling across Google & Meta ecosystems.' },
-  { icon: Search, title: 'SEO & Website Optimization', desc: 'Technical SEO, on-page/off-page strategies, and Core Web Vitals improvements.' },
-  { icon: Share2, title: 'Social Media Marketing', desc: 'Content strategy, engagement growth, and performance analytics across major platforms.' },
-  { icon: Bot, title: 'AI Automation & Chatbot Development', desc: 'Automations, lead qualification, and customer support using AI agents and chatbots.' },
-  { icon: TrendingUp, title: 'Business Growth Strategy', desc: 'Data-backed go-to-market plans, funnel optimization, and experimentation frameworks.' },
+  {
+    icon: BarChart3,
+    title: 'Data Analytics Services',
+    price: '₹5000',
+    desc: 'Transform your business decisions with powerful dashboards, automated reports, and meaningful insights.',
+    items: [
+      'Power BI Dashboard',
+      'Excel Automation',
+      'SQL Reporting',
+      'KPI Analysis',
+      'Business Insights Report',
+      'AI-driven data summaries',
+    ],
+  },
+  {
+    icon: Megaphone,
+    title: 'Digital Marketing Services',
+    price: '₹5000',
+    desc: 'Boost your online presence and attract real customers with high-performance marketing strategies.',
+    items: [
+      'SEO Audit + Optimization',
+      'Meta Ads Setup',
+      'Google Ads Setup',
+      'Keyword Strategy',
+      'Social Media Content Plan',
+      'AI-generated creative assets',
+    ],
+  },
+  {
+    icon: Bot,
+    title: 'AI Business Automation',
+    price: '₹5000',
+    desc: 'Save time and grow faster with smart AI workflows and tools.',
+    items: [
+      'Chatbot Setup',
+      'AI Reply Automation',
+      'Lead Automation',
+      'AI Dashboard Summary',
+      'Workflow Design',
+      'Training on usage',
+    ],
+  },
 ];
 
 function Services() {
@@ -21,12 +57,12 @@ function Services() {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-white text-center"
         >
-          Services
+          Our Services (₹5000 Each)
         </motion.h2>
-        <p className="text-slate-300 text-center mt-3 max-w-2xl mx-auto">Practical programs that drive measurable growth across acquisition, retention, and revenue.</p>
+        <p className="text-slate-300 text-center mt-3 max-w-2xl mx-auto">Choose a package that delivers real outcomes with clear deliverables.</p>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map(({ icon: Icon, title, desc }) => (
+          {services.map(({ icon: Icon, title, desc, price, items }) => (
             <motion.div
               key={title}
               initial={{ opacity: 0, y: 20 }}
@@ -38,8 +74,19 @@ function Services() {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-500/20 to-purple-500/20 flex items-center justify-center text-cyan-300 mb-4">
                 <Icon className="w-6 h-6" />
               </div>
-              <h3 className="text-white font-semibold text-lg">{title}</h3>
+              <div className="flex items-baseline justify-between gap-3">
+                <h3 className="text-white font-semibold text-lg">{title}</h3>
+                <span className="text-cyan-300 text-sm font-medium">{price}</span>
+              </div>
               <p className="text-slate-300 mt-2 text-sm leading-relaxed">{desc}</p>
+              <ul className="mt-4 text-slate-300 text-sm space-y-2">
+                {items.map((i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                    <span>{i}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
