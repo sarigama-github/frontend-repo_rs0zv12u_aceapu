@@ -1,3 +1,5 @@
+import nnaLogo from '../assets/nna-logo.svg';
+
 function Footer() {
   const quickLinks = ['Home','About','Courses','Services','Contact','FAQs'];
   const policies = ['Privacy Policy','Terms & Conditions','Refund Policy'];
@@ -7,7 +9,10 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <p className="text-white font-semibold text-lg">N NextGen Analytics</p>
+            <div className="flex items-center gap-3">
+              <img src={nnaLogo} alt="NNA" className="w-8 h-8 rounded-lg" />
+              <p className="text-white font-semibold text-lg">NNA</p>
+            </div>
             <p className="text-slate-400 mt-2 text-sm">Building Skills. Building Businesses. Building the Future.</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -29,12 +34,12 @@ function Footer() {
             </div>
           </div>
           <div>
-            <p className="text-slate-300 text-sm">Brand Line</p>
-            <p className="text-white mt-2">Building Skills. Building Businesses. Building the Future.</p>
+            <p className="text-slate-300 text-sm">Focus</p>
+            <p className="text-white mt-2">Data • Digital • AI</p>
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-white/10 text-slate-400 text-sm flex items-center justify-between">
-          <p>© {new Date().getFullYear()} N NextGen Analytics. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} NNA. All rights reserved.</p>
           <p>Data • Digital • AI</p>
         </div>
       </div>
