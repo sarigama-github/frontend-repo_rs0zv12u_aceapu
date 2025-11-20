@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2048" height="2048" viewBox="0 0 1024 1024" fill="none">
+  <title>DataVision Academy &amp; Services - DVA Monogram Logo</title>
+  <desc>Futuristic, minimal, geometric logo for DataVision Academy &amp; Services with DVA abstract monogram, subtle data charts, growth arrow, AI circuit accents, and neon blue to purple gradients on transparent background.</desc>
+  <defs>
+    <linearGradient id="grad-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="grad-accent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="grad-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#3B82F6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .stroke-main { stroke: url(#grad-main); }
+      .stroke-accent { stroke: url(#grad-accent); }
+    </style>
+  </defs>
+
+  <!-- Subtle center glow (no background fill) -->
+  <circle cx="512" cy="512" r="340" fill="url(#grad-glow)" filter="url(#soft-glow)"/>
+
+  <!-- Outer ring with data wave dashes -->
+  <g opacity="0.9">
+    <circle cx="512" cy="512" r="360" stroke="url(#grad-main)" stroke-width="6" stroke-opacity="0.28" fill="none"/>
+    <circle cx="512" cy="512" r="360" stroke="url(#grad-accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 22" stroke-opacity="0.8" fill="none"/>
+  </g>
+
+  <!-- Circuit nodes (AI feel) -->
+  <g stroke="url(#grad-main)" stroke-width="3" opacity="0.85">
+    <line x1="512" y1="152" x2="512" y2="208"/>
+    <circle cx="512" cy="142" r="8" fill="#00E5FF"/>
+
+    <line x1="830" y1="512" x2="774" y2="512"/>
+    <circle cx="842" cy="512" r="8" fill="#8B5CF6"/>
+
+    <line x1="512" y1="872" x2="512" y2="816"/>
+    <circle cx="512" cy="882" r="8" fill="#3B82F6"/>
+
+    <line x1="194" y1="512" x2="250" y2="512"/>
+    <circle cx="182" cy="512" r="8" fill="#00E5FF"/>
+  </g>
+
+  <!-- Abstract chart bars at base (subtle) -->
+  <g transform="translate(0,8)">
+    <g stroke="url(#grad-main)" stroke-width="10" stroke-linecap="round" opacity="0.6">
+      <line x1="420" y1="744" x2="420" y2="680"/>
+      <line x1="456" y1="744" x2="456" y2="652"/>
+      <line x1="492" y1="744" x2="492" y2="612"/>
+      <line x1="528" y1="744" x2="528" y2="640"/>
+      <line x1="564" y1="744" x2="564" y2="700"/>
+    </g>
+  </g>
+
+  <!-- Growth arrow / line chart -->
+  <g fill="none" stroke="url(#grad-accent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft-glow)">
+    <path d="M312 664 C 380 600, 430 580, 478 560 S 586 506, 640 492" opacity="0.65"/>
+    <polyline points="620,512 676,468 736,488" opacity="0.9"/>
+    <polyline points="340,696 420,616 520,596 620,520 700,460" opacity="0.85"/>
+    <path d="M676 468 l 24 -48 l 48 24"/>
+  </g>
+
+  <!-- DVA Monogram (geometric, minimal) -->
+  <!-- D: semicircle + vertical -->
+  <g transform="translate(0,-10)">
+    <path d="M360 360 L360 664" class="stroke-main" stroke-width="28" stroke-linecap="round"/>
+    <path d="M360 360 H488 C 582 360, 582 664, 488 664 H360" class="stroke-main" stroke-width="28" stroke-linecap="round"/>
+
+    <!-- V: angled chevron -->
+    <path d="M522 360 L512 388 L450 548 L512 664 L574 548 L636 388 L626 360" class="stroke-main" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- A: created with two strokes and a crossbar implied by negative space -->
+    <path d="M642 664 L716 360" class="stroke-main" stroke-width="28" stroke-linecap="round"/>
+    <path d="M792 664 L716 360" class="stroke-main" stroke-width="28" stroke-linecap="round"/>
+    <path d="M676 532 H756" class="stroke-accent" stroke-width="16" stroke-linecap="round"/>
+  </g>
+
+  <!-- Label (optional, can be hidden by setting opacity to 0) -->
+  <g font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" text-anchor="middle" opacity="0.9">
+    <text x="512" y="820" font-size="30" fill="#a5b4fc" opacity="0.0">DataVision Academy &amp; Services</text>
+  </g>
+</svg>
